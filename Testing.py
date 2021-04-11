@@ -2,20 +2,13 @@
 # Twitterbot/bots/followfollowers.py
 
 import tweepy as tp
-import logging
+
 from config import create_api
 import csv
 import time
 api = create_api()
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger()
 
-def follow_followers(api):
-    logger.info("Retrieving and following followers")
-    for follower in tp.Cursor(api.followers).items():
-        if not follower.following:
-            logger.info(f"Following {follower.name}")
-            follower.follow()
+
 
 
 def get_all_tweets(screen_name):
