@@ -1,9 +1,9 @@
 # Twitterbot/bots/config.py
 
-import logging
+
 import tweepy as tp
 
-logger = logging.getLogger()
+
 
 
 def create_api():
