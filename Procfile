@@ -1,2 +1,2 @@
-worker: WarnEveryone.py
-web: server.py
+worker: python WarnEveryone.py
+web: python server.py
