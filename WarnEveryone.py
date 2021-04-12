@@ -9,8 +9,7 @@ api = create_api()
 
 def warn_everyone(screen_name):
     oldtweet = ""
-    helpful_bot_says = " Disclaimer: This post not financial advice. Subsequent and potentially related market swings " \ 
-                       "may be highly volatile. Independent due diligence is always recommended."
+    helpful_bot_says = " Disclaimer: This post not financial advice. Subsequent and potentially related market swings may be highly volatile. Independent due diligence is always recommended."
     while True:
         tweet = api.user_timeline(screen_name=screen_name, count=1)  # get most recent status/tweet
         if tweet == oldtweet:  # if it's the same as the most recent tweet, skip
