@@ -14,8 +14,7 @@ def warn_everyone(screen_name):
         if tweet == oldtweet:   #if it's the same as the most recent tweet, skip
             time.sleep(60)
             print(tweet[0].id)
-            pass
-        elif HelpfulBotSays == api.user_timeline(screen_name="NiceHelpfulBot1", count=1)[0].text:
+        elif HelpfulBotSays == api.user_timeline(screen_name="NiceHelpfulBot1", count=1)[0].text: #see bot's most recent tweet text, if its the same then sleep
             time.sleep(60)
             print(tweet[0].id)
             oldtweet = tweet
