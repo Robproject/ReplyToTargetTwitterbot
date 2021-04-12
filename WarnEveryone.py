@@ -15,7 +15,7 @@ def warn_everyone(screen_name):
             time.sleep(60)
             print(tweet[0].id)
             pass
-        elif HelpfulBotSays == api.user_timeline(screen_name="NiceHelpfulBot1", count=1).text:
+        elif HelpfulBotSays == api.user_timeline(screen_name="NiceHelpfulBot1", count=1)[0].text:
             time.sleep(60)
             print(tweet[0].id)
             oldtweet = tweet
