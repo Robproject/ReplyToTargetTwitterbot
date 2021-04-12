@@ -27,6 +27,7 @@ def warn_everyone(screen_name):
 def main():
 
     while True:
+
         warn_everyone("elonmusk")
 
 if __name__ == "__main__":

@@ -15,7 +15,7 @@ def create_api():
 
     auth = tp.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_secret)
-    api = tp.API(auth)
+    api = tp.API(auth, wait_on_rate_limit=True)
 
     try:
         api.verify_credentials()
