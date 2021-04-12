@@ -19,7 +19,7 @@ def warn_everyone(screen_name):
             time.sleep(60)
             print(tweet[0].id)
             oldtweet = tweet
-            pass
+        else:
             api.update_status("@" + screen_name + HelpfulBotSays, tweet[0].id)
             print(tweet[0].id)  # reply to most recent tweet
             oldtweet = tweet
