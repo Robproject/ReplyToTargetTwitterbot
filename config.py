@@ -2,15 +2,16 @@
 
 
 import tweepy as tp
+from os import environ
 
 
 
 
 def create_api():
-    consumer_key = 'fZJFAqx5pGaToxORIKmjxW3cS'
-    consumer_secret = '4wn9ZGs80g08tnwhaiqUF0RQgC8ZkABfwaIKjiJ0JQVaGFfCDO'
-    access_token = '1366627415389212675-JHK0IbFIzZhfRe1XEHGmbnGiRLOT2T'
-    access_secret = 'F15tNwEV8u9NzhThBVT1oiDhYst2YnQu2YPAz1pVZBU81'
+    consumer_key = environ['CONSUMER_KEY']
+    consumer_secret = environ['CONSUMER_SECRET']
+    access_token = environ['ACCESS_KEY']
+    access_secret = environ['ACCESS_SECRET']
 
     auth = tp.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_secret)

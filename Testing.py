@@ -10,7 +10,6 @@ api = create_api()
 
 
 
-
 def get_all_tweets(screen_name):
 
 
