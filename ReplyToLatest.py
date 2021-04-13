@@ -25,10 +25,10 @@ def reply_everytime(target_user, replying_user):
             my_tweet1 = api.user_timeline(screen_name=replying_user, count=1)  # secondary get replying most recent status/tweet
             if target_user_tweet_id == oldtweet[0].id:
                 # if it's the same as the most recent tweet, skip
-                time.sleep(sleeptime)
                 print(str(target_user_tweet_id) + " = " + target_user + "'s most recent status id, which hasn't changed")
+                time.sleep(sleeptime)
             elif target_user_tweet_id == target_user_tweet1_id == my_tweet[0].in_reply_to_status_id == my_tweet1[0].in_reply_to_status_id:
-                # if the status id of the most recent targeted user is the same id as my most recent status's target (already been replied to)]
+                # if the most recent status id of the targeted user is the same id as the status the replying user replied to (already been replied to)]
                 # this check performed so no replies occur on startup
                 # checks both id calls to make sure they're correct
                 print(str(target_user_tweet_id) + " = " + target_user + "'s status id that " + replying_user + " already replied to")
