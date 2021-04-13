@@ -3,11 +3,12 @@ from config import create_api
 import time
 
 api = create_api()
+from os import environ
 
-Target_user = "elonmusk"
-Replying_user = "NiceHelpfulBot1"
-sleeptime = 60
-reply_text = "Disclaimer: This post not financial advice. Subsequent and potentially related market swings may be highly volatile. Independent due diligence is always recommended."
+Target_user = environ['Target_user']
+Replying_user = environ['Replying_user']
+sleeptime = environ['sleeptime']
+reply_text = environ['reply_text']
 
 
 def reply_everytime(target_user, replying_user):
