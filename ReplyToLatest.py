@@ -7,7 +7,7 @@ from os import environ
 
 Target_user = environ['Target_user']
 Replying_user = environ['Replying_user']
-sleeptime = environ['sleeptime']
+sleeptime = environ[sleeptime]
 reply_text = environ['reply_text']
 
 
