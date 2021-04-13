@@ -1,11 +1,6 @@
 # Twitterbot/bots/config.py
-
-
 import tweepy as tp
 from os import environ
-
-
-
 
 def create_api():
     consumer_key = environ['CONSUMER_KEY']
